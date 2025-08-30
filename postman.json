@@ -1,0 +1,746 @@
+{
+    "info": {
+        "_postman_id": "12345678-1234-1234-1234-123456789012",
+        "name": "Articles API - Complete Testing Collection",
+        "description": "Complete collection for testing Laravel Articles API with all CRUD operations",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Users Management",
+            "item": [
+                {
+                    "name": "Get All Users",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/users",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "users"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create New User",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Mohamed Ahmed\",\n    \"email\": \"mohamed@example.com\",\n    \"password\": \"password123\",\n    \"role\": \"user\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/users",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "users"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Admin User",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Sara Mahmoud\",\n    \"email\": \"sara@example.com\",\n    \"password\": \"password123\",\n    \"role\": \"admin\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/users",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "users"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get User by ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/users/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "users", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update User",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Mohamed Ahmed Updated\",\n    \"email\": \"mohamed.updated@example.com\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/users/5",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "users", "5"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete User",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/users/6",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "users", "6"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get User Profile",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/profile",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "profile"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Articles Management",
+            "item": [
+                {
+                    "name": "Get All Articles",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/articles",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "articles"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create New Article",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"Programming Test Article\",\n    \"content\": \"This is a test article containing useful information about programming and web development. This content can be very long and contain multiple paragraphs.\\n\\nThis is a second paragraph containing more useful information for the reader.\",\n    \"user_id\": 2\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/articles",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "articles"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Article with Different User",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"Complete Guide to Learning Laravel\",\n    \"content\": \"Laravel is a powerful and flexible PHP framework that helps developers build modern and secure web applications. In this article we will learn Laravel basics and how to get started.\\n\\nWe will cover the following topics:\\n- Installing Laravel\\n- Creating projects\\n- Working with databases\\n- Creating APIs\",\n    \"user_id\": 3\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/articles",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "articles"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Article by ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/articles/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "articles", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Article",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"Updated Article on Advanced Programming\",\n    \"content\": \"This is updated content for the article containing new and improved information about programming and development.\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/articles/6",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "articles", "6"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Article",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/articles/7",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "articles", "7"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get User Articles",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/users/2/articles",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "users", "2", "articles"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Comments Management",
+            "item": [
+                {
+                    "name": "Get All Comments",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/comments",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "comments"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create New Comment",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"content\": \"Great comment on this article! Thank you for the useful information.\",\n    \"user_id\": 3,\n    \"article_id\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/comments",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "comments"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Another Comment",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"content\": \"Can you add more practical examples? That would be very helpful.\",\n    \"user_id\": 4,\n    \"article_id\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/comments",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "comments"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Comment on Different Article",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"content\": \"Interesting and useful topic, looking forward to more of these articles.\",\n    \"user_id\": 2,\n    \"article_id\": 2\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/comments",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "comments"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Comment by ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/comments/1",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "comments", "1"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Comment",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"content\": \"Updated comment: This is an excellent and very useful article, thank you for the effort!\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/comments/15",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "comments", "15"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Comment",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/comments/16",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "comments", "16"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Article Comments",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/articles/1/comments",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "articles", "1", "comments"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get User Comments",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/users/2/comments",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "users", "2", "comments"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Admin Dashboard",
+            "item": [
+                {
+                    "name": "Admin Dashboard Stats",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/dashboard",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "admin", "dashboard"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Admin - Manage Users",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/users",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "admin", "users"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Admin - Manage Articles",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/articles",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "admin", "articles"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Admin - Manage Comments",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/admin/comments",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "admin", "comments"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Error Testing",
+            "item": [
+                {
+                    "name": "Create User - Missing Required Fields",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Test User\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/users",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "users"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create User - Duplicate Email",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Another User\",\n    \"email\": \"admin@example.com\",\n    \"password\": \"password123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/users",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "users"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Non-Existent User",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/users/9999",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "users", "9999"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Article - Invalid User ID",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"Test Article\",\n    \"content\": \"Test content\",\n    \"user_id\": 9999\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/articles",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "articles"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Comment - Invalid Article ID",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"content\": \"Test comment\",\n    \"user_id\": 2,\n    \"article_id\": 9999\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/comments",
+                            "host": ["{{base_url}}"],
+                            "path": ["api", "comments"]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [""]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [""]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://127.0.0.1:8000",
+            "type": "string"
+        }
+    ]
+}
