@@ -1,15 +1,12 @@
-// بيانات اليوزر (تتجاب من API أو localStorage)
 const user = {
   id: 1,
   name: "Lily Habib",
   email: "lily@example.com"
 };
 
-// عرض البيانات
 document.getElementById("user-name").textContent = user.name;
 document.getElementById("user-email").textContent = user.email;
 
-// جلب بوستات اليوزر
 const postsContainer = document.getElementById("user-posts-container");
 
 fetch(`http://127.0.0.1:8000/api/users/${user.id}/articles`)
@@ -49,7 +46,6 @@ fetch(`http://127.0.0.1:8000/api/users/${user.id}/articles`)
   })
   .catch(err => console.error("Error fetching user posts:", err));
 
-// دالة الكومنتات
 function toggleComments(articleId) {
   const commentsContainer = document.getElementById(`comments-${articleId}`);
 
@@ -71,7 +67,6 @@ function toggleComments(articleId) {
   }
 }
 
-// دوال الإيديت وديليت (placeholder)
 function editPost(id) {
   alert("Edit post with ID: " + id);
 }
