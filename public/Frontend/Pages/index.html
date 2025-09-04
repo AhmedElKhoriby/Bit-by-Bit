@@ -1,47 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Blogs</title>
-        <link rel="stylesheet" href="../Styles/Homepage.css" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-            crossorigin="anonymous"
-        />
-    </head>
-    <body>
-        <nav class="navbar">
-            <img src="../Images/croppedblogslogo.png" alt="Logo" height="50" />
-            <div class="nav-links">
-                <a class="login" href="login.html">Login</a>
-                <a class="signup" href="signup.html">Sign Up</a>
-            </div>
-        </nav>
-        <container class="container-fluid">
-            <div class="Hero">
-                <div class="content">
-                    <h1>Welcome to Our Blog Platform</h1>
-                    <p>Discover, Share, and Connect through Stories</p>
-                </div>
-                <a href="signup.html" class="cta-button"
-                    >Create Your First Post</a
-                >
-            </div>
-            <h2 class="text-start m-4 ">Latest Blog Posts</h2>
-            <div class="row justify-content-center m-0">
-                <div class="col-8" id="posts-container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blogs</title>
+  <link rel="stylesheet" href="../Styles/Homepage.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <!-- Navbar Placeholder -->
+  <div id="navbar-container"></div>
 
-                </div>
-            </div>
-        </container>
-        <script src="../Scripts/Home.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+  <container class="container-fluid">
+    <div class="Hero text-center">
+      <div class="content">
+        <h1>Welcome to Our Blog Platform</h1>
+        <p>Discover, Share, and Connect through Stories</p>
+      </div>
+      <a class="cta-button" href="signup.html" >
+        Create Your First Post
+      </a>
+    </div>
+
+    <h2 class="text-start m-4">Latest Blog Posts</h2>
+    <div class="row justify-content-center m-0">
+      <div class="col-8" id="posts-container">
+      </div>
+    </div>
+  </container>
+
+  <script src="../Scripts/home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

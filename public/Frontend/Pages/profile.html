@@ -10,9 +10,7 @@
     body {
       background: #f8f9fa;
     }
-
-    /* Navbar */
-    .navbar {
+   .navbar {
       margin-left: 40px;
       margin-right: 40px;
     }
@@ -21,7 +19,6 @@
       color: white !important;
     }
 
-    /* User info */
     .user-info {
       text-align: center;
       margin: 30px 0;
@@ -33,8 +30,6 @@
     .user-info p {
       color: #555;
     }
-
-    /* Posts */
     .card {
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -65,33 +60,47 @@
     .btn-delete:hover {
       background: #d93737;
     }
+    .part1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cta-button{
+        background-color: #6a45f0;
+        color: #ededed;
+        padding: 15px 30px;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.171);
+    }
   </style>
 </head>
 <body>
 
 <div id="navbar-container"></div>
-
-  <!-- User Info -->
-  <div class="user-info">
-    <h2 id="user-name">User Name</h2>
-    <p id="user-email">user@email.com</p>
-  </div>
-
-  <!-- User Posts -->
-  <div class="container">
+<div class="container">
+    <div class="part1">
+        <div class="user-info">
+        <h2 id="user-name">User Name</h2>
+        <p id="user-email">user@email.com</p>
+    </div>
+    <a href="addPost.html" class="cta-button">Add new Post</a>
+    </div>
     <div id="user-posts-container">
-      <!-- Posts injected by JS -->
     </div>
   </div>
 <script>
-    fetch("partials/userNav.html")  // المسار حسب مكان الملف عندك
+    fetch("partials/userNav.html")
         .then(response => response.text())
         .then(data => {
         document.getElementById("navbar-container").innerHTML = data;
         })
         .catch(error => console.error("Error loading navbar:", error));
     </script>
-  <script src="profile.js"></script>
+    
+  <script src="../Scripts/profile.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

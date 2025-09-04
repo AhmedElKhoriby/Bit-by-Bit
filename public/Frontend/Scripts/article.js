@@ -5,7 +5,6 @@ const articleId = params.get("id");
 const articleContainer = document.getElementById("article-container");
 const commentsContainer = document.getElementById("comments-container");
 
-// جلب المقال
 fetch(`http://127.0.0.1:8000/api/articles/${articleId}`)
   .then(res => res.json())
   .then(response => {
