@@ -1,17 +1,12 @@
-const API_URL = "http://127.0.0.1:3000"; // dummy JSON server
+const API_URL = "http://127.0.0.1:3000";
 
-// يجيب اليوزر اللي عامل لوج ان (من API أو sessionStorage)
 const loggedInUser = JSON.parse(sessionStorage.getItem("loggedInUser"));
 
 if (!loggedInUser) {
-  // لو مفيش يوزر عامل لوج ان → رجّعه على صفحة اللوج ان
   window.location.href = "login.html";
 } else {
-  // عرض بيانات المستخدم
   document.getElementById("user-name").textContent = loggedInUser.name;
   document.getElementById("user-email").textContent = loggedInUser.email;
-
-  // عرض المقالات بتاعته
   fetch(`${API_URL}/users/${loggedInUser.id}/articles`)
     .then(res => res.json())
     .then(articles => {
@@ -47,8 +42,6 @@ if (!loggedInUser) {
     })
     .catch(err => console.error("Error fetching articles:", err));
 }
-
-// جلب الكومنتات
 function toggleComments(articleId) {
   const commentsContainer = document.getElementById(`comments-${articleId}`);
 

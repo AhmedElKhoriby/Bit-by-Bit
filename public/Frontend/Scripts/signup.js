@@ -24,14 +24,10 @@ document.getElementById("signupForm").addEventListener("submit", function (e) {
     })
     .then((data) => {
       console.log("Signup response:", data);
-
-      // ✅ خزن بيانات اليوزر في localStorage عشان تقدر تعرضها بعدين في البروفايل
       localStorage.setItem("user", JSON.stringify(data.user ?? data));
       localStorage.setItem("role", role);
 
       alert("Signup successful! Redirecting...");
-
-      // ✅ حوله على حسب الدور بتاعه
       if (role === "admin") {
         window.location.href = "dashboard.html";
       } else {
