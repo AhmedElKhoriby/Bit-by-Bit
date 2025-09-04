@@ -1,12 +1,12 @@
-
-body{
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     height: 100vh;
 }
-.navbar{
+
+.navbar {
     margin-left: 40px;
     margin-right: 40px;
     color: white;
@@ -16,9 +16,10 @@ body{
     align-items: center;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: #000000;
 }
+
 .nav-links {
     color: #f0f0f0;
     text-decoration: none;
@@ -27,11 +28,12 @@ body{
     font-size: 18px;
     display: flex;
 }
-.login{
+
+.login {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#6a45f0;
+    background-color: #6a45f0;
     color: #ededed;
     padding: 10px 20px;
     width: 120px;
@@ -43,17 +45,17 @@ body{
     font-size: 20px;
 }
 
-.signup{
+.signup {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 44px;
-    background-color:#f4f4f4;
+    background-color: #f4f4f4;
     color: #6a45f0;
     padding: 10px 20px;
     width: 120px;
     border-radius: 5px;
-    border:#7351ef 2px solid;
+    border: #7351ef 2px solid;
     text-decoration: none;
     text-align: center;
 }
@@ -76,31 +78,34 @@ body{
 }
 
 .Hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  padding: 4px; /* سمك البوردر */
-  background: linear-gradient(90deg, #7351ef, #5ca5f6);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 4px;
+    /* سمك البوردر */
+    background: linear-gradient(90deg, #7351ef, #5ca5f6);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
 
-.Hero .content h1{
+.Hero .content h1 {
     font-size: 48px;
     margin-bottom: 20px;
     color: #6a45f0;
 }
-.Hero .content p{
+
+.Hero .content p {
     font-size: 24px;
     margin-bottom: 40px;
     color: #555;
 }
-.cta-button{
+
+.cta-button {
     background-color: #6a45f0;
     color: #ededed;
     padding: 15px 30px;
@@ -109,12 +114,11 @@ body{
     border-radius: 5px;
     text-decoration: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.171);
-
 }
 
 .card {
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     background: #ffffff;
     color: #ededed;
@@ -123,13 +127,15 @@ body{
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
-.card-header{
+
+.card-header {
     background: linear-gradient(90deg, #7b5cff, #3ac3ff);
-      color: white;
-      border-radius: 12px 12px 0 0;
+    color: white;
+    border-radius: 12px 12px 0 0;
 }
+
 .card-title {
     color: #4b4bff;
     font-weight: 600;
@@ -153,21 +159,23 @@ body{
     text-decoration: none;
 
 }
+
 .card-footer .btn-link:hover {
 
     background-color: #f5f0ff;
 }
+
 #posts-container .comment {
-  border-top: 1px solid #eee;
-  padding: 8px 0;
+    border-top: 1px solid #eee;
+    padding: 8px 0;
 }
 
 .add-comment input {
-  border-radius: 8px;
-  padding: 6px 10px;
+    border-radius: 8px;
+    padding: 6px 10px;
 }
 
 .add-comment button {
-  border-radius: 8px;
-  padding: 6px 16px;
+    border-radius: 8px;
+    padding: 6px 16px;
 }

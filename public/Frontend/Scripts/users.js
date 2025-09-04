@@ -31,8 +31,6 @@ fetch("http://127.0.0.1:8000/api/users")
         document.getElementById("errorBox").innerHTML =
           `<div class="alert alert-danger">Error: ${err.message}</div>`;
       });
-
-    // حذف يوزر
     function deleteUser(userId) {
       if (confirm("Are you sure you want to delete this user?")) {
         fetch(`http://127.0.0.1:8000/api/users/${userId}`, {
